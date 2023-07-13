@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="main.js" defer></script>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <aside class="side">
+          <div class="front_card">
+            <figure>
+              <img src="images/card-logo.svg" alt="card-logo" />
+            </figure>
+            <div class="card_details">
+              <span class="card_number">0000 0000 0000 0000</span>
+              <div class="card_name_expiry_date">
+                <div class="name">JANE APPLESEED</div>
+                <div class="expiry_date">
+                  <span class="month_front">00</span>/<span class="year_front"
+                    >00</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back_card">
+            <span class="cvc_number">000</span>
+          </div>
+        </aside>
+        <form class="form" id="form">
+          <div class="cardholder_name_form">
+            <label for="cardholder_name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              maxlength="30"
+              name="cardholder_name"
+              id="cardholder_name"
+              placeholder="e.g. Jane Appleseed"
+              class="input-border"
+            />
+            <p class="error">Can't be blank</p>
+          </div>
+          <div class="card_number_form">
+            <label for="card_number">CARD NUMBER</label>
+            <input
+              type="text"
+              maxlength="19"
+              name="card_number"
+              id="card_number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="input-border"
+            />
+            <p class="error">Can't be blank</p>
+          </div>
+          <div class="expiry_date_cvc_form">
+            <div class="expiry_date_form">
+              <label for="month">EXP. DATE (MM/YY)</label>
+              <input
+                type="text"
+                name="month"
+                id="month"
+                placeholder="MM"
+                maxlength="2"
+                class="input-border"
+              />
+              <input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="YY"
+                maxlength="2"
+                class="input-border"
+              />
+              <p class="error">Can't be blank</p>
+            </div>
+            <div class="cvc_form">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                name="cvc"
+                id="cvc"
+                placeholder="e.g. 123"
+                maxlength="3"
+                class="input-border"
+              />
+              <p class="error">Can't be blank</p>
+            </div>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Confirm" />
+          </div>
+        </form>
+        <div class="thank_you">
+          <figure>
+            <img src="images/icon-complete.svg" alt="icon-complete" />
+          </figure>
+          <p class="thank_you_heading">THANK YOU!</p>
+          <p class="thank_you_message">We've added your card details</p>
+          <button class="thank_you_continue">Continue</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/vishwa3" target="_blank">Vishwanath</a>
+      </div>
+    </main>
+  </body>
+</html>
